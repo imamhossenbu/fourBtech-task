@@ -1,4 +1,4 @@
-// components/sections/Mission.tsx
+
 export default function Mission() {
     return (
         <section

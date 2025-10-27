@@ -50,7 +50,6 @@ export default function HeroWithNav() {
                         </Link>
                     </div>
 
-                    {/* Mobile actions */}
                     <div className="flex items-center gap-2 md:hidden">
                         <ThemeToggle />
                         <MobileMenu />
@@ -69,7 +68,6 @@ export default function HeroWithNav() {
                                 Pay{" "}
                                 <span className="relative inline-block">
                                     fast and smarter
-                                    {/* custom underline SVG */}
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
                                         viewBox="0 0 300 10"
@@ -127,7 +125,7 @@ export default function HeroWithNav() {
                             </div>
                         </div>
 
-                        {/* RIGHT (big image) */}
+                        {/* RIGHT */}
                         <div className="order-1 relative md:order-2 md:col-span-6 lg:col-span-7">
                             <div
                                 className="

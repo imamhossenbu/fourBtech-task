@@ -1,4 +1,4 @@
-// components/sections/GlobalReach.tsx
+
 import { Globe2, Users2, CreditCard, ShieldCheck } from "lucide-react";
 
 export default function GlobalReach() {

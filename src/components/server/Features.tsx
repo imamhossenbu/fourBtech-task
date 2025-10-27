@@ -1,4 +1,4 @@
-// components/sections/Features.tsx
+
 
 import Reveal from "@/components/client/Reveal";
 import HoverLift from "@/components/client/HoverLift";
@@ -10,29 +10,29 @@ export default function Features() {
             title: "Instant payments",
             body: "Send money to friends or family in real–time, for free.",
             img: "/img5.png",
-            lightBg: "bg-[#EEF4FF]",        // light (pastel blue)
-            darkBg: "dark:bg-blue-900/30",  // dark tinted
+            lightBg: "bg-[#EEF4FF]",
+            darkBg: "dark:bg-blue-900/30",
         },
         {
             title: "No hidden fees",
             body: "Clear and simple pricing. Always be aware of your costs.",
             img: "/img7.png",
-            lightBg: "bg-[#FFF3D9]",         // light (soft sand)
-            darkBg: "dark:bg-amber-900/30",  // dark tinted
+            lightBg: "bg-[#FFF3D9]",
+            darkBg: "dark:bg-amber-900/30",
         },
         {
             title: "Digital wallet",
             body: "Store money securely and make fast transfers or purchases.",
             img: "/img8.png",
-            lightBg: "bg-[#EAF7FF]",        // light (aqua tint)
-            darkBg: "dark:bg-cyan-900/30",  // dark tinted
+            lightBg: "bg-[#EAF7FF]",
+            darkBg: "dark:bg-cyan-900/30",
         },
         {
             title: "Secure transactions",
             body: "End-to-end encryption for all transactions.",
             img: "/img1.png",
-            lightBg: "bg-[#F1E9FF]",          // light (lavender)
-            darkBg: "dark:bg-violet-900/30",  // dark tinted
+            lightBg: "bg-[#F1E9FF]",
+            darkBg: "dark:bg-violet-900/30",
         },
     ];
 

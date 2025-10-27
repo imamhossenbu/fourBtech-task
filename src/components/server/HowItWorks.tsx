@@ -1,4 +1,4 @@
-// components/sections/HowItWorks.tsx
+
 import Image from "next/image";
 import { LuDownload, LuCreditCard, LuWallet } from "react-icons/lu";
 
@@ -65,7 +65,7 @@ export default function HowItWorks() {
                                     key={num}
                                     className={`relative ${topDivider} ${leftDivider} p-6 sm:p-8 pt-10 sm:pt-12 min-h-[170px]`}
                                 >
-                                    {/* faint step number */}
+
                                     <span
                                         aria-hidden
                                         className="pointer-events-none absolute left-4 top-3 select-none text-5xl font-extrabold
@@ -74,7 +74,7 @@ export default function HowItWorks() {
                                         {num}
                                     </span>
 
-                                    {/* icon → heading → text */}
+
                                     <div className="relative z-10 flex flex-col items-start">
                                         <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl
                                   border border-[#E8EAF0] bg-white/90
@@ -95,7 +95,7 @@ export default function HowItWorks() {
                     </div>
                 </div>
 
-                {/* Big image */}
+
                 <div className="mt-6 overflow-hidden rounded-2xl border border-[#E8EAF0] dark:border-white/10 bg-white dark:bg-slate-900/60">
                     <div className="relative h-60 w-full sm:h-80 lg:h-[620px]">
                         <Image

@@ -1,4 +1,4 @@
-// components/sections/Testimonials.tsx
+
 import TestimonialsSlider from "@/components/client/TestimonialsSlider";
 
 export default function Testimonial() {
@@ -32,7 +32,7 @@ export default function Testimonial() {
     return (
         <section className="w-[90%] mx-auto py-20">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-                {/* LEFT = 50% */}
+                {/* LEFT  */}
                 <div className="lg:pr-6">
                     <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#7C3AED]">
                         Testimonial
@@ -46,7 +46,7 @@ export default function Testimonial() {
                     </p>
 
                     <div className="mt-7 flex items-center gap-4">
-                        {/* Prev */}
+
                         <button
                             id="t-prev"
                             aria-label="Previous"
@@ -58,7 +58,7 @@ export default function Testimonial() {
                             ‹
                         </button>
 
-                        {/* Next */}
+
                         <button
                             id="t-next"
                             aria-label="Next"
@@ -73,7 +73,7 @@ export default function Testimonial() {
 
                 </div>
 
-                {/* RIGHT = 50% */}
+                {/* RIGHT*/}
                 <div className="lg:pl-2">
                     <TestimonialsSlider items={items} />
                 </div>

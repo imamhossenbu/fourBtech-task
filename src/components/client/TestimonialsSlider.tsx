@@ -1,4 +1,4 @@
-// components/client/TestimonialsSlider.tsx
+
 "use client";
 
 import Image from "next/image";
@@ -18,11 +18,11 @@ export default function TestimonialsSlider({ items }: { items: Item[] }) {
                 navigation={{ prevEl: "#t-prev", nextEl: "#t-next" }}
                 loop
                 speed={500}
-                spaceBetween={18}                    // 👉 peek আরও বেশি করার জন্য গ্যাপ কম
-                slidesPerView={1.2}                  // mobile peek
+                spaceBetween={18}
+                slidesPerView={1.2}
                 breakpoints={{
                     768: { slidesPerView: 1.5, spaceBetween: 18 },
-                    1024: { slidesPerView: 1.6, spaceBetween: 20 }, // 👉 বড় স্ক্রিনে আরও বেশি peek
+                    1024: { slidesPerView: 1.6, spaceBetween: 20 },
                     1440: { slidesPerView: 1.8, spaceBetween: 22 },
                 }}
                 className="overflow-visible!"
@@ -41,9 +41,9 @@ export default function TestimonialsSlider({ items }: { items: Item[] }) {
               "
                         >
                             {/* stars */}
-                            <div className="mb-2 flex items-center gap-[2px] text-[#F59E0B]">
+                            <div className="mb-2 flex items-center gap-0.5 text-[#F59E0B]">
                                 {Array.from({ length: t.rating }).map((_, s) => (
-                                    <AiFillStar key={s} className="h-[16px] w-[16px]" />
+                                    <AiFillStar key={s} className="h-4 w-4" />
                                 ))}
                             </div>
 

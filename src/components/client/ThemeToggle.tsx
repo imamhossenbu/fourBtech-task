@@ -4,53 +4,30 @@ import { useEffect, useState } from "react";
 import { FiSun, FiMoon } from "react-icons/fi";
 
 export default function ThemeToggle({ className = "" }: { className?: string }) {
-    const [mounted, setMounted] = useState(false);
     const [isDark, setIsDark] = useState(false);
 
     useEffect(() => {
-        setMounted(true);
-        try {
-            const ls = localStorage.getItem("theme");
-            const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-            const dark = ls ? ls === "dark" : prefersDark;
-            setIsDark(dark);
-        } catch { }
+        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+        const savedTheme = localStorage.getItem("theme");
+        const dark = savedTheme ? savedTheme === "dark" : prefersDark;
+        setIsDark(dark);
+        document.documentElement.classList.toggle("dark", dark);
     }, []);
 
-    useEffect(() => {
-        if (!mounted) return;
-        const root = document.documentElement;
-        if (isDark) {
-            root.classList.add("dark");
-            localStorage.setItem("theme", "dark");
-        } else {
-            root.classList.remove("dark");
-            localStorage.setItem("theme", "light");
-        }
-    }, [isDark, mounted]);
-
-    if (!mounted) {
-        return (
-            <button
-                aria-label="Toggle theme"
-                className={`h-10 w-10 rounded-lg border flex items-center justify-center ${className}`}
-            >
-                <span className="inline-block h-4 w-4 rounded-full bg-muted-foreground/40" />
-            </button>
-        );
-    }
+    const toggleTheme = () => {
+        const newTheme = !isDark;
+        setIsDark(newTheme);
+        document.documentElement.classList.toggle("dark", newTheme);
+        localStorage.setItem("theme", newTheme ? "dark" : "light");
+    };
 
     return (
         <button
+            onClick={toggleTheme}
             aria-label="Toggle theme"
-            onClick={() => setIsDark(v => !v)}
-            className={`h-10 w-10 rounded-lg border flex items-center justify-center hover:bg-muted transition ${className}`}
+            className={`h-10 w-10 rounded-lg border flex items-center justify-center transition hover:bg-muted/30 ${className}`}
         >
-            {isDark ? (
-                <FiSun className="text-foreground text-lg" />
-            ) : (
-                <FiMoon className="text-foreground text-lg" />
-            )}
+            {isDark ? <FiSun className="text-lg" /> : <FiMoon className="text-lg" />}
         </button>
     );
 }

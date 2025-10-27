@@ -1,4 +1,4 @@
-// components/sections/Security.tsx
+
 import { BsDot } from "react-icons/bs";
 
 export default function Security() {

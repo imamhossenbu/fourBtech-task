@@ -10,10 +10,7 @@ import Brand from "@/components/server/Brand";
 import Mission from "@/components/server/Mission";
 import GlobalReach from "@/components/server/GlobalReach";
 
-/**
- * ISR: rebuild every 24h (86400s)
- */
-export const revalidate = 86400;
+
 
 export default function Page() {
   return (

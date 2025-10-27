@@ -1,5 +1,4 @@
-// components/sections/Pricing.tsx
-import { CheckCircle2 } from "lucide-react";
+
 
 export default function Pricing() {
     const plans = [
@@ -27,7 +26,7 @@ export default function Pricing() {
                 "Detailed transaction reports",
                 "Priority email & chat support",
             ],
-            theme: "dark" as const, // highlighted
+            theme: "dark" as const,
             cta: "Get Advanced Plan",
         },
         {
@@ -112,7 +111,7 @@ export default function Pricing() {
                                 </div>
 
                                 {/* CTA pinned to bottom */}
-                                <div className="mt-auto pt-6">                         {/* ⬅️ push to bottom */}
+                                <div className="mt-auto pt-6">
                                     {isDark ? (
                                         <button className="w-full h-12 rounded-full bg-[#3B82F6] text-white font-semibold hover:bg-[#2563EB] transition shadow-inner" type="button">
                                             {p.cta}

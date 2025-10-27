@@ -1,4 +1,4 @@
-// components/sections/Footer.tsx
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -15,11 +15,11 @@ export default function Footer() {
             >
                 {/* top content */}
                 <div className="grid grid-cols-1 gap-10 py-10 lg:grid-cols-3">
-                    {/* brand + blurb */}
+
                     <div>
                         <Link href="/" aria-label="Easy Pay Home" className="flex items-center">
                             <Image
-                                src="/logo.png"            // your logo in /public
+                                src="/logo.png"
                                 alt="Easy Pay"
                                 width={30}
                                 height={30}
