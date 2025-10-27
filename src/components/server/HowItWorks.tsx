@@ -1,6 +1,8 @@
 
 import Image from "next/image";
 import { LuDownload, LuCreditCard, LuWallet } from "react-icons/lu";
+import Reveal from "../client/Reveal";
+import HoverLift from "../client/HoverLift";
 
 export default function HowItWorks() {
     const steps = [
@@ -28,24 +30,26 @@ export default function HowItWorks() {
       "
             >
 
-                <div className="flex flex-wrap items-center justify-between gap-4 ">
-                    <div>
-                        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7C3AED]">
-                            How it works
-                        </p>
-                        <h2 className="mt-2 text-[26px] leading-snug font-semibold text-[#0B1020] dark:text-white sm:text-3xl">
-                            Make payments, transfers, and
-                            <br className="hidden sm:block" /> more in 3 simple steps
-                        </h2>
-                    </div>
+                <Reveal>
+                    <div className="flex flex-wrap items-center justify-between gap-4 ">
+                        <div>
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-[#7C3AED]">
+                                How it works
+                            </p>
+                            <h2 className="mt-2 text-[26px] leading-snug font-semibold text-[#0B1020] dark:text-white sm:text-3xl">
+                                Make payments, transfers, and
+                                <br className="hidden sm:block" /> more in 3 simple steps
+                            </h2>
+                        </div>
 
-                    <a
-                        href="#get-started"
-                        className="inline-flex h-10 items-center justify-center rounded-full bg-blue-600 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-black"
-                    >
-                        Get Started Now
-                    </a>
-                </div>
+                        <a
+                            href="#get-started"
+                            className="inline-flex h-10 items-center justify-center rounded-full bg-blue-600 px-5 text-sm font-semibold text-white shadow-sm transition hover:bg-black"
+                        >
+                            Get Started Now
+                        </a>
+                    </div>
+                </Reveal>
 
                 <div
                     className="
@@ -96,18 +100,20 @@ export default function HowItWorks() {
                 </div>
 
 
-                <div className="mt-6 overflow-hidden rounded-2xl border border-[#E8EAF0] dark:border-white/10 bg-white dark:bg-slate-900/60">
-                    <div className="relative h-60 w-full sm:h-80 lg:h-[620px]">
-                        <Image
-                            src="/man.png"
-                            alt="Using Easy Pay at a cafe"
-                            fill
-                            priority
-                            className="object-contain"
-                            sizes="(max-width: 640px) 92vw, (max-width: 1024px) 92vw, 92vw"
-                        />
+                <HoverLift>
+                    <div className="mt-6 overflow-hidden rounded-2xl border border-[#E8EAF0] dark:border-white/10 bg-white dark:bg-slate-900/60">
+                        <div className="relative h-60 w-full sm:h-80 lg:h-[620px]">
+                            <Image
+                                src="/man.png"
+                                alt="Using Easy Pay at a cafe"
+                                fill
+                                priority
+                                className="object-contain"
+                                sizes="(max-width: 640px) 92vw, (max-width: 1024px) 92vw, 92vw"
+                            />
+                        </div>
                     </div>
-                </div>
+                </HoverLift>
             </div>
         </section>
 

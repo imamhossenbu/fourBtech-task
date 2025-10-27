@@ -1,5 +1,6 @@
 
 import TestimonialsSlider from "@/components/client/TestimonialsSlider";
+import Reveal from "../client/Reveal";
 
 export default function Testimonial() {
     const items = [
@@ -31,53 +32,55 @@ export default function Testimonial() {
 
     return (
         <section className="w-[90%] mx-auto py-20">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-                {/* LEFT  */}
-                <div className="lg:pr-6">
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#7C3AED]">
-                        Testimonial
-                    </p>
-                    <h2 className="mt-2 text-[32px] leading-tight font-semibold text-[#0B1020] dark:text-white">
-                        We’ve build trust with
-                        <br className="hidden sm:block" /> reviews from real users
-                    </h2>
-                    <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
-                        Boost your credibility by featuring genuine testimonials from real users.
-                    </p>
+            <Reveal>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    {/* LEFT  */}
+                    <div className="lg:pr-6">
+                        <p className="text-[12px] font-semibold uppercase tracking-[0.18em] text-[#7C3AED]">
+                            Testimonial
+                        </p>
+                        <h2 className="mt-2 text-[32px] leading-tight font-semibold text-[#0B1020] dark:text-white">
+                            We’ve build trust with
+                            <br className="hidden sm:block" /> reviews from real users
+                        </h2>
+                        <p className="mt-3 max-w-xl text-[15px] leading-relaxed text-gray-600 dark:text-gray-300">
+                            Boost your credibility by featuring genuine testimonials from real users.
+                        </p>
 
-                    <div className="mt-7 flex items-center gap-4">
+                        <div className="mt-7 flex items-center gap-4">
 
-                        <button
-                            id="t-prev"
-                            aria-label="Previous"
-                            className="h-12 w-12 rounded-full border border-slate-300 bg-white 
+                            <button
+                                id="t-prev"
+                                aria-label="Previous"
+                                className="h-12 w-12 rounded-full border border-slate-300 bg-white 
                text-slate-900 hover:bg-slate-900 hover:text-white transition
                dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 
                dark:hover:bg-slate-100 dark:hover:text-slate-900"
-                        >
-                            ‹
-                        </button>
+                            >
+                                ‹
+                            </button>
 
 
-                        <button
-                            id="t-next"
-                            aria-label="Next"
-                            className="h-12 w-12 rounded-full bg-slate-900 text-white 
+                            <button
+                                id="t-next"
+                                aria-label="Next"
+                                className="h-12 w-12 rounded-full bg-slate-900 text-white 
                hover:bg-slate-800 transition
                dark:bg-slate-100 dark:text-slate-900 
                dark:hover:bg-white"
-                        >
-                            ›
-                        </button>
+                            >
+                                ›
+                            </button>
+                        </div>
+
                     </div>
 
+                    {/* RIGHT*/}
+                    <div className="lg:pl-2">
+                        <TestimonialsSlider items={items} />
+                    </div>
                 </div>
-
-                {/* RIGHT*/}
-                <div className="lg:pl-2">
-                    <TestimonialsSlider items={items} />
-                </div>
-            </div>
+            </Reveal>
         </section>
     );
 }
